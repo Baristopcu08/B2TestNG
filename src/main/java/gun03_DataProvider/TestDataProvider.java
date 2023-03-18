@@ -1,9 +1,7 @@
-package gun03;
+package gun03_DataProvider;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.Scanner;
 
 public class TestDataProvider {
 

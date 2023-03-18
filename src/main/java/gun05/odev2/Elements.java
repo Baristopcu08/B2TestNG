@@ -17,7 +17,7 @@ public enum Elements {
     TABLE_EDIT_BUTTON("//div[@class='oxd-table-card' and .//div[contains(@class,'oxd-table-cell') and contains(., '%s')]]//button[2]")
     ;
 
-    private String xpathString;
+    private final String xpathString;
     private By xpath;
 
     Elements(String xpathString) {

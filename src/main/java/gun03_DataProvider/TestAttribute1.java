@@ -1,4 +1,4 @@
-package gun03;
+package gun03_DataProvider;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

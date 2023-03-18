@@ -6,10 +6,19 @@ import org.testng.annotations.Test;
 
 
 public class Test1 {
-
-    String url = "https://demowebshop.tricentis.com/";
+    String URL="https://demowebshop.tricentis.com/";
     String myUsername = "abc123@aa.com";
     String myPassword = "123456";
+    By lLog_in = By.linkText("Log in");
+    By lEmail = By.id("Email");
+    By lPassword = By.id("Password");
+    By lSubmitButton = By.xpath("//input[@value='Log in']");
+
+
+
+
+    String url = "https://demowebshop.tricentis.com/";
+
     By lLoginformUsername = By.id("Email");
     By lLoginformPassword = By.id("Password");
     By lLoginformSubmitButton = By.xpath("//input[@value='Log in']");

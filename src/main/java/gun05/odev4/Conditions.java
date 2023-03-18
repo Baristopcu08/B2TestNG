@@ -5,5 +5,4 @@ public enum Conditions {
     visible,
     clickable,
     invisible
-    ;
 }

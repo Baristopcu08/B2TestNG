@@ -30,7 +30,7 @@ public class InputActions {
 
     public static void sensKeys(By locator, CharSequence...text) {
         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10))
-                .until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(text);;
+                .until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(text);
     }
 
 }
