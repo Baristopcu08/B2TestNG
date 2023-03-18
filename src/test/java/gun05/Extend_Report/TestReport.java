@@ -1,4 +1,4 @@
-package gun05;
+package gun05.Extend_Report;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

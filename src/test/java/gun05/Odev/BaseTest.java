@@ -10,9 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.MessageFormat;
 import java.util.Random;
-
 import static gun05.Odev.Locators.*;
-import static gun05.Odev.Locators.lList;
 
 public class BaseTest {
 

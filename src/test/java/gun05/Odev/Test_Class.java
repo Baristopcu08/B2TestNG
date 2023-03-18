@@ -1,24 +1,19 @@
 package gun05.Odev;
 
+import static gun05.Odev.BaseTest.randomText;
+import static gun05.Odev.BaseTest.randomText;
+import static gun05.Odev.Locators.*;
 import Utils.Driver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.Message;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
-import java.text.MessageFormat;
 import java.time.Duration;
-import java.util.Random;
 
-import static gun05.Odev.Locators.*;
 
 /*1.  https://opensource-demo.orangehrmlive.com/
 2.  Login olunuz
@@ -34,7 +29,7 @@ import static gun05.Odev.Locators.*;
 //label[text()='Username']/ancestor::div[starts-with(@class,'oxd-grid-item')]//input*/
 
 
-public class Homework extends BaseTest {
+public class Test_Class extends BaseTest{
 
     private   String USERNAME = randomText();
     private final String NEWUSERNAME = randomText();
@@ -51,7 +46,6 @@ public class Homework extends BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         super.driver=driver;
         super.wait=wait;
-
     }
 
     @Test

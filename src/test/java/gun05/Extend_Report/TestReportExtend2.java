@@ -1,4 +1,4 @@
-package gun05;
+package gun05.Extend_Report;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
