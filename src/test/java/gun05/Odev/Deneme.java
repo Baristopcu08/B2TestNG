@@ -1,18 +1,17 @@
 package gun05.Odev;
 
-import static gun05.Odev.BaseTest.randomText;
-import static gun05.Odev.BaseTest.randomText;
+import static gun05.Odev.Conditions.visibility;
 import static gun05.Odev.Locators.*;
 import Utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+import java.text.MessageFormat;
 import java.time.Duration;
+
 
 
 /*1.  https://opensource-demo.orangehrmlive.com/
@@ -29,7 +28,7 @@ import java.time.Duration;
 //label[text()='Username']/ancestor::div[starts-with(@class,'oxd-grid-item')]//input*/
 
 
-public class Test_Class extends BaseTest{
+public class Deneme extends BaseTest_1{
 
     private   String USERNAME = randomText();
     private final String NEWUSERNAME = randomText();
@@ -73,12 +72,14 @@ public class Test_Class extends BaseTest{
         sendKeys(lUSarname,USERNAME);
         sendKeys(lpassword2,PASWORD);
         sendKeys(lpaswordConfirm,PASWORD);
-        String searchEmploye="cecil";
-        new Actions(driver).sendKeys(driver.findElement(lTypeForHint), "ceci").pause(3).build().perform();
-        click(By.xpath("//div[@role='listbox']//span[text()='Cecil  Bonaparte']"));
+        String searchEmploye="ce";
+        sendKeys(lTypeForHint,searchEmploye);
+        waitFor(By.xpath(MessageFormat.format(l_ALL_SELECTS,searchEmploye)),visibility);
+        click_2(l_ALL_SELECTS,searchEmploye);
+
         click(lSaveButton);
         wait_URL_Contains("viewSystemUsers");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loutput));
+        waitFor(loutput,visibility);
         click(loutput); //
         click(llogout);
     }
@@ -104,4 +105,6 @@ public class Test_Class extends BaseTest{
     public void tearDown() {
         driver.quit();
     }
+
+
 }

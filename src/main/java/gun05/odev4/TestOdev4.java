@@ -1,6 +1,7 @@
 package gun05.odev4;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import utils.Driver;
 
@@ -23,6 +24,7 @@ public class TestOdev4 {
         $(xpath(INPUT, "Username")).sendKeys(myUsername);
         $(xpath(INPUT, "Password")).sendKeys(myPassword);
         $(xpath(BUTTON, "Login")).click();
+
     }
 
     @Test(dependsOnMethods = {"testLogin"}, priority = 1)
@@ -36,6 +38,7 @@ public class TestOdev4 {
 
         $(xpath(INPUT, "Employee Name")).sendKeys("Lisa");
         $(xpath(DROPDOWN_OPTION, "Lisa")).shouldBe(Conditions.visible).click();
+
 
         newUsername = "Ahmet" + RandomStringUtils.randomAlphabetic(3);
         newPassword = "Aa123." + RandomStringUtils.randomAlphabetic(5);

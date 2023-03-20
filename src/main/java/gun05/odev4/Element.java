@@ -11,6 +11,7 @@ import java.time.Duration;
 
 
 public class Element {
+
     private final WebDriver driver = Driver.getDriver();
 
     private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -22,18 +23,16 @@ public class Element {
         return new Element(locator);
     }
 
-    public static void open(String url){
-        new Element()._open(url);
-    }
-
-
-    private Element(){
-
-    }
-
     private Element(By locator){
         this.locator = locator;
         element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    public Element() {
+    }
+
+    public static void open(String url){
+        new Element()._open(url);
     }
 
     public void _open(String url){

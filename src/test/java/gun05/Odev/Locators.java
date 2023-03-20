@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 public class Locators {
 
    public static String ALL_CLICK_LOCATOR="//button[contains(.,\"{0}\")] | //input[@type='button' and contains(text(),\"{0}\")]";
+   public static String l_ALL_SELECTS="//div[@role=\"listbox\"]//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),\"{0}\")]";
 
    public static final
    By lusarName=By.xpath("//input[@placeholder='Username']");
@@ -15,7 +16,7 @@ public class Locators {
 
 
    public static final
-By llAdminButton=By.xpath("//span[text()='Admin']");
+   By llAdminButton=By.xpath("//span[text()='Admin']");
    public static final
    By lAddButtun=By.xpath("//button[normalize-space()='Add']");
    public static final

@@ -19,4 +19,8 @@ public class Locators {
     public static By xpath(String xpathStr, String label) {
         return By.xpath(String.format(xpathStr, label));
     }
+
+    public static By xpath(By locator) {
+        return locator;
+    }
 }

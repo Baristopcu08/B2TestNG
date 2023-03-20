@@ -28,6 +28,7 @@ public class TestOdev2 extends BaseOdev2 {
         INPUT.of("Username").sendkeys(myUsername);
         INPUT.of("Password").sendkeys(myPassword);
         BUTTON.of("Login").click();
+
     }
 
     @Test(dependsOnMethods = {"testLogin"}, priority = 1)

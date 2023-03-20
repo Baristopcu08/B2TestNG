@@ -12,46 +12,43 @@ import java.text.MessageFormat;
 import java.util.Random;
 import static gun05.Odev.Locators.*;
 
-public class BaseTest {
+public class BaseTest_1 {
 
     WebDriver driver;
     WebDriverWait wait;
 
-
-
-
-    protected void changeUsarname(String oldUsarName,String newUsarname){
-        click_2(lList,oldUsarName);
+    protected void changeUsarname(String oldUsarName, String newUsarname) {
+        click_2(lList, oldUsarName);
         click(lUsarnameChance);
-        new Actions(driver).sendKeys(Keys.BACK_SPACE,Keys.BACK_SPACE,Keys.BACK_SPACE,Keys.BACK_SPACE,Keys.BACK_SPACE).build().perform();
+        new Actions(driver).sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE).build().perform();
         new Actions(driver).sendKeys(newUsarname).build().perform();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        click_2(ALL_CLICK_LOCATOR,"Save");
+        click_2(ALL_CLICK_LOCATOR, "Save");
     }
 
     protected void SerchUsarname(String usarname) {
         wait_URL_Contains("viewSystemUsers");      //admin page control
-        sendKeys(lUsarnameSearch,usarname);
+        sendKeys(lUsarnameSearch, usarname);
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        click_2(ALL_CLICK_LOCATOR,"Search");
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(MessageFormat.format(lList,usarname))));
+        click_2(ALL_CLICK_LOCATOR, "Search");
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(MessageFormat.format(lList, usarname))));
     }
 
-    protected void wait_URL_Contains(String url_text){
+    protected void wait_URL_Contains(String url_text) {
         wait.until(ExpectedConditions.urlContains(url_text));
     }
 
-    protected void click_2(String locator,String locatorName) {
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(MessageFormat.format(locator,locatorName))));
-        click(By.xpath(MessageFormat.format(locator,locatorName)));
+    protected void click_2(String locator, String locatorName) {
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(MessageFormat.format(locator, locatorName))));
+        click(By.xpath(MessageFormat.format(locator, locatorName)));
 
     }
 
@@ -60,9 +57,10 @@ public class BaseTest {
         driver.findElement(locator).click();
     }
 
-    protected void sendKeys(By locator,String text) {
-        sendKeys(driver.findElement(locator),text);
+    protected void sendKeys(By locator, String text) {
+        sendKeys(driver.findElement(locator), text);
     }
+
     protected void sendKeys(WebElement element, String text) {
         wait.until(ExpectedConditions.visibilityOf(element));
         element.sendKeys(text);
@@ -80,5 +78,23 @@ public class BaseTest {
                 .toString();
 
         return generatedString;
+    }
+
+    protected void waitFor(By locator, Conditions condition) {
+        switch (condition) {
+            case clickable:
+                wait.until(ExpectedConditions.elementToBeClickable(locator));
+                break;
+            case visibility:
+                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+                break;
+            case invisibility:
+                wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+                break;
+            default:
+                wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+                break;
+        }
+
     }
 }
