@@ -1,6 +1,5 @@
-package Odevler.A_TemelSiniflar;
+package A_TemelSiniflar;
 
-import Odevler.demowebshop.Navigate;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -97,10 +96,16 @@ public class Element {
 
     public Element navigate(Navigate navigate, String url){
         switch (navigate){
-            case refresh -> driver.navigate().refresh();
-            case forward -> driver.navigate().forward();
-            case back -> driver.navigate().back();
-            case to -> {
+            case refresh:
+                driver.navigate().refresh();
+                break;
+            case forward:
+                driver.navigate().forward();
+                break;
+            case back:
+                driver.navigate().back();
+                break;
+            case to: {
                 driver.navigate().to(url);
             }
         }

@@ -1,4 +1,4 @@
-package Odevler.A_TemelSiniflar;
+package A_TemelSiniflar;
 
 public enum Conditions {
     visibilty,
