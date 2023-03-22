@@ -1,6 +1,6 @@
 package gun03_DataProvider;
 
-import Utils.Driver;
+import Utils.ThreatDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +29,7 @@ WebDriverWait wait;
 
   @BeforeSuite
   public void setup(){
-      driver= Driver.getDriver();
+      driver= ThreatDriver.getDriver();
       wait=new WebDriverWait(driver, Duration.ofMillis(10_000));
   }
 

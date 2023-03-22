@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" >
+    <parameter name="version" value="chrome"/>
+    <test verbose="2" preserve-order="true" name="Test1">
+        <parameter name="version" value="chrome"/>
+        <classes>
+            <class name="gun06.POM.Odev.Test_HomePage">
+
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Test2">
+        <parameter name="version" value="chrome"/>
+        <classes>
+            <class name="gun06.POM.Odev.Test_HomePage">
+
+            </class>
+        </classes>
+    </test>
+</suite>
+

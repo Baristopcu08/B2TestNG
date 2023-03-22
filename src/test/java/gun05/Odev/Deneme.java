@@ -2,7 +2,7 @@ package gun05.Odev;
 
 import static gun05.Odev.Conditions.visibility;
 import static gun05.Odev.Locators.*;
-import Utils.Driver;
+import Utils.ThreatDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -40,7 +40,7 @@ public class Deneme extends BaseTest_1{
 
     @BeforeSuite
     public void setup(){
-        driver= Driver.getDriver();
+        driver= ThreatDriver.getDriver();
         wait=new WebDriverWait(driver,Duration.ofMillis(10_000));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         super.driver=driver;

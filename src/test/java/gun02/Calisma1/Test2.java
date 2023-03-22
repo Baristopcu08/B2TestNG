@@ -1,13 +1,9 @@
 package gun02.Calisma1;
 
-import Utils.Driver;
+import Utils.ThreatDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-
-import java.util.Properties;
-import java.util.Set;
 
 public class Test2 {
 //    public static void main(String[] args) {
@@ -33,7 +29,7 @@ public class Test2 {
 
     @Test
     public void gmailLogin() {
-        driver= Driver.getDriver();
+        driver= ThreatDriver.getDriver();
         driver.get("https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1");
         //driver.findElement(llogin).click();
         //driver.findElement(lusername).sendKeys("baristopcu2008@gmail.com", Keys.ENTER);

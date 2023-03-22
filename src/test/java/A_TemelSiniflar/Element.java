@@ -116,7 +116,7 @@ public class Element {
         element.findElement(By.xpath("."+locator));
         return this;
     }
-    public Element findElementSecond(String locator,String label){
+    public Element findElementForSecond(String locator,String label){
         String format = MessageFormat.format("." + locator, label);
         element.findElement(By.xpath(format));
         return this;

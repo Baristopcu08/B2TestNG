@@ -1,9 +1,0 @@
-
-
-1.  Sayfalarin class class yapilmasidir.
-2.  Locatorlar ve ihtiyac duyulan methodlar bu clas isinde yer alir.
-
-POM : Page Object Model
-
-
-    Selenium'un @FindBy, @FindAll, @FindBys annonationslari ile element olusturmasina POM deniliyor

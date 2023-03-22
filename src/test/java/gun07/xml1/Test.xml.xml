@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/MAVEN PROJECT/B2TestNG/src/test/java/gun07/Test_1.java">
+        <classes>
+            <class name="gun07.xml1.Test_1"/>
+            <class name="gun07.xml1.Test_12"/>
+        </classes>
+    </test>
+</suite>

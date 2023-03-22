@@ -1,11 +1,10 @@
 package gun02.Calisma1;
 import Utils.Browsers;
-import Utils.Driver;
+import Utils.ThreatDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -19,7 +18,7 @@ public class Tests {
 
     @BeforeTest
     public void testName() {
-         driver= Driver.getDriver(Browsers.Chrome);
+         driver= ThreatDriver.getDriver(Browsers.CHROME);
          wait=new WebDriverWait(driver, Duration.ofMillis(10_000));
     }
     @Test()
