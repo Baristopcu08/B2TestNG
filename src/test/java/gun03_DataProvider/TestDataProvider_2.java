@@ -85,7 +85,7 @@ WebDriverWait wait;
     }
 
     private void sendKeys(By locator,String text) {
-        new Actions(driver).sendKeys(driver.findElement(locator), Keys.CLEAR);
+        //new Actions(driver).sendKeys(driver.findElement(locator), Keys.CLEAR);
         driver.findElement(locator).sendKeys(text);
     }
 

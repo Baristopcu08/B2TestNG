@@ -25,7 +25,7 @@ public class DriverStatic {
                     WebDriverManager.edgedriver().setup();
                     driver=new EdgeDriver();
                     break;
-                case FREFOX:
+                case FIREFOX:
                     WebDriverManager.firefoxdriver().setup();
                     driver=new FirefoxDriver();
                     break;

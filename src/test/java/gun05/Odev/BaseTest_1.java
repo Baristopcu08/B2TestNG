@@ -58,7 +58,7 @@ public class BaseTest_1 {
     }
 
     protected void sendKeys(By locator, String text) {
-        sendKeys(driver.findElement(locator), text);
+        sendKeys((WebElement) driver.findElement(locator), text);
     }
 
     protected void sendKeys(WebElement element, String text) {

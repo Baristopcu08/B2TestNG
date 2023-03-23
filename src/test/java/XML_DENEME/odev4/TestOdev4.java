@@ -1,15 +1,15 @@
 package XML_DENEME.odev4;
 
+import Utils.ThreatDriver;
+import java.time.Duration;
 import Utils.Browsers;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import Utils.ThreatDriver;
-
-import java.time.Duration;
 
 import static XML_DENEME.odev4.Element.*;
 import static XML_DENEME.odev4.Locators.*;
@@ -28,15 +28,19 @@ public class TestOdev4 {
     @BeforeTest
     public void beforeTest(String browser) {
         driver= ThreatDriver.getDriver(Browsers.valueOf(browser.toUpperCase()));
+        System.out.println(Browsers.valueOf(browser.toUpperCase()));
         wait=new WebDriverWait(driver,Duration.ofMillis(10000));
         Element.driver=driver;
         Element.wait=wait;
-
+    }
+    @AfterTest()
+    public void afterTest(){
+        //ThreatDriver.quitDriver();
     }
 
     @Test
     public void gotoURL() {
-        ThreatDriver.getDriver().manage().window().maximize();
+        driver.manage().window().maximize();
         open(url);
     }
 

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <parameter name="Browser" value="EDGE"></parameter>
-    <test verbose="2" preserve-order="true"
-          name="Test1">
+<suite name="All Test Suite" parallel="tests">
+    <parameter name="Browser" value="EDGE" />
+    <test verbose="2" preserve-order="true"  name="Test1">
+        <classes>
+            <class name="XML_DENEME.odev4.TestOdev4"/>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true"  name="Test2">
         <classes>
             <class name="XML_DENEME.odev4.TestOdev4"/>
         </classes>
