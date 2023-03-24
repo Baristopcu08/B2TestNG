@@ -1,0 +1,23 @@
+
+
+
+1.  https://demos.bellatrix.solutions/
+2.  "Home" linkine tikla
+3.  ilk ürüne tikla, ismini onayla geri dön
+
+1-3 arasini
+    a. maximized
+    b. 700x700 boyutunda yapin
+
+
+
+
+@BeforeTest
+
+@AfterTest
+
+@Test   -> GotoUrl
+
+@Test   -> Maximized
+
+@Test   -> windowed
